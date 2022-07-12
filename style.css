@@ -5,8 +5,9 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: 1px solid red;
 }
+
+btn
 
 /* Permet de centrer le logo dans le header */
 nav {
@@ -53,10 +54,14 @@ a:hover {
 }
 
 .bloc-lg {
+  /* Texte mis en noir plus armonieux */
+  color: black;
   padding: 100px 50px;
 }
 
 .bloc-md {
+  /* Texte mis en noir plus armonieux */
+  color: black;
   padding: 50px;
 }
 
@@ -281,6 +286,10 @@ a:hover {
 }
 
 .row-no-gutters {
+  display: flex;
+  justify-content: space-evenly;
+
+  padding-left: 5px;
   margin-right: 0;
   margin-left: 0;
 }
@@ -296,6 +305,9 @@ a:hover {
 }
 
 .navbar {
+  /* Centrage du logo */
+  display: flex;
+  justify-content: center;
   margin-bottom: 0;
   z-index: 1;
 }
@@ -381,6 +393,7 @@ a:hover {
   .nav > li .dropdown-menu a,
   .nav > li .dropdown-menu a:hover {
     color: #484848;
+    border: 2px solid red;
   }
   .nav-invert .site-navigation {
     left: 0;
@@ -389,9 +402,12 @@ a:hover {
   .nav-center {
     text-align: center;
   }
-  .nav-center . {
+
+  /* Erreur de css il y avait un point qui trainait */
+  .nav-center {
     width: 100%;
   }
+
   .nav-center .navbar-header,
   .nav-center .navbar-brand,
   .nav-center .nav > li {
@@ -408,6 +424,7 @@ a:hover {
   .nav-center.mini-nav .navbar-toggle {
     float: none;
     margin: 10px auto 0;
+    border: 2px solid red;
   }
 }
 
@@ -648,8 +665,12 @@ a[data-lightbox]:hover img {
   background: none;
 }
 
+/* Weight des h2 plus grande */
+h2 {
+  font-weight: 900;
+}
+
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -684,14 +705,15 @@ a {
   max-width: 520px;
   margin: auto auto auto auto;
 }
-/* La police était trop petite ?*/
+
+/* La police était trop petite */
 p {
   font-size: 20px;
 }
 
 */ .tight-width-whitespace {
   max-width: 600px;
-  margin: auto auto auto auto;
+  margin: auto;
 }
 
 .h1 {
@@ -746,7 +768,8 @@ h4 {
 }
 
 .white {
-  color: #ffffff !important;
+  /* Problème de contraste couleur noire à la place du blanc */
+  color: black !important;
 }
 
 .portfolio-thumb {
@@ -754,7 +777,8 @@ h4 {
 }
 
 .portfolio-row {
-  margin-bottom: 44px;
+  /* Retiré pour centrage
+  margin-bottom: 44px;*/
   margin-top: 50px;
 }
 
@@ -790,7 +814,7 @@ h4 {
 
 .btn-atomic-tangerine {
   background: #f3976c;
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 .btn-atomic-tangerine:hover {
@@ -852,6 +876,7 @@ h4 {
 
 @media (max-width: 992px) and (min-width: 768px) {
   .navbar .nav {
+    display: block;
     max-width: 80%;
   }
   .nav-center.navbar .nav {
@@ -901,6 +926,10 @@ h4 {
 }
 
 @media (max-width: 767px) {
+  .navbar {
+    display: block;
+  }
+
   /*Size des h1 était trop grande*/
   h1 {
     font-size: 25px;
@@ -909,6 +938,11 @@ h4 {
   /*Size des p était trop petite*/
   p {
     font-size: 20px;
+  }
+
+  /* Centrage des photos plus aéré*/
+  .portfolio-thumb {
+    padding: 30px 30px;
   }
 
   /*Doublon sur la media querie ci-dessous*/
@@ -1007,6 +1041,11 @@ h4 {
   .bloc-lg {
     padding: 40px 0;
   }
+
+  .col-sm-12 p {
+    color: black;
+  }
+
   .bloc-sm,
   .bloc-md {
     padding-left: 0;
@@ -1063,4 +1102,9 @@ h4 {
 .col-xs-12 p {
   display: flex;
   flex-direction: column;
+}
+
+/* Mis en italique pour citation*/
+.col-xs-12 span {
+  font-style: italic;
 }
