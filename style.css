@@ -7,8 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-btn
-
 /* Permet de centrer le logo dans le header */
 nav {
   display: flex;
@@ -56,7 +54,7 @@ a:hover {
 .bloc-lg {
   /* Texte mis en noir plus armonieux */
   color: black;
-  padding: 100px 50px;
+  padding: 50px 50px;
 }
 
 .bloc-md {
@@ -103,10 +101,11 @@ a:hover {
   right: 0;
 }
 
+/* Retirer car léger problème d'opacité
 .texture-paper::before {
   background: url("img/texture-paper.png");
   background-size: 280px 280px;
-}
+}*/
 
 .b-parallax {
   background-attachment: fixed;
@@ -146,7 +145,8 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-  color: rgba(255, 255, 255, 0.6);
+  /* Problème de contraste lié à la couleur passage du blanc au noir*/
+  color: black;
 }
 
 .d-bloc .a-btn:hover,
@@ -288,7 +288,6 @@ a:hover {
 .row-no-gutters {
   display: flex;
   justify-content: space-evenly;
-
   padding-left: 5px;
   margin-right: 0;
   margin-left: 0;
@@ -393,7 +392,6 @@ a:hover {
   .nav > li .dropdown-menu a,
   .nav > li .dropdown-menu a:hover {
     color: #484848;
-    border: 2px solid red;
   }
   .nav-invert .site-navigation {
     left: 0;
@@ -424,7 +422,6 @@ a:hover {
   .nav-center.mini-nav .navbar-toggle {
     float: none;
     margin: 10px auto 0;
-    border: 2px solid red;
   }
 }
 
@@ -558,7 +555,7 @@ button {
 
 a[data-lightbox] {
   position: relative;
-  text-align: center;
+  align-items: center;
 }
 
 a[data-lightbox]:hover::before {
@@ -725,7 +722,7 @@ p {
   margin-top: 22px;
   color: #ffffff !important;
   text-transform: uppercase;
-  padding: 12px 28px 12px 28px;
+  padding: 15px 28px 12px 28px;
   font-size: 16px;
   font-weight: 700;
 }
@@ -772,9 +769,10 @@ h4 {
   color: black !important;
 }
 
+/* Retiré pour centrage
 .portfolio-thumb {
   margin-bottom: 24px;
-}
+}*/
 
 .portfolio-row {
   /* Retiré pour centrage
@@ -809,7 +807,7 @@ h4 {
 }
 
 .tc-white {
-  color: #f3976c !important;
+  color: white !important;
 }
 
 .btn-atomic-tangerine {
@@ -827,7 +825,8 @@ h4 {
 }
 
 .ltc-white:hover {
-  color: #cccccc !important;
+  /*Rappel de couleur ajusté à la place d'un gris*/
+  color: black !important;
 }
 
 .ltc-atomic-tangerine {
@@ -961,8 +960,8 @@ h4 {
   h6,
   p,
   #disqus_thread {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
   .b-parallax {
     background-attachment: scroll;
