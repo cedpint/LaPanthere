@@ -888,7 +888,7 @@ h4 {
 }
 
 .bg-presentation {
-  background-image: url("img/image-de-presentation.bmp");
+  background-image: url("img/image-de-presentation.jpeg");
 }
 /*Permet de centrer le texte et de résoudre le problème de constrats en passant du blanc au noir*/
 .col-sm-12 h1,
