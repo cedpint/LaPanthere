@@ -1436,7 +1436,6 @@ img {
   vertical-align: middle;
 }
 
-/* Max-width transformée en width pour centrage */
 .carousel-inner > .item > a > img,
 .carousel-inner > .item > img,
 .img-responsive,
@@ -1444,6 +1443,7 @@ img {
 .thumbnail > img {
   display: block;
   width: 100%;
+  height: auto;
 }
 
 .img-rounded {
@@ -4856,8 +4856,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .nav > li > a {
   position: relative;
-  display: block;
-  padding: 10px 15px;
+  display: flex;
+  padding: 10px 30px;
 }
 
 .nav > li > a:focus,
@@ -5116,7 +5116,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     box-shadow: none;
   }
   .navbar-collapse.collapse {
-    display: none; /* Désactiver car inutile*/
+    display: none !important;
     height: auto !important;
     padding-bottom: 0;
     overflow: visible !important;
@@ -7974,8 +7974,7 @@ button.close {
   margin: 1px;
   text-indent: -999px;
   cursor: pointer;
-  /* Retiré car erreur
-  background-color: #000\9;*/
+  background-color: #0009;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #fff;
   border-radius: 10px;

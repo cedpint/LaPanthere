@@ -64,7 +64,7 @@ a:hover {
 }
 
 .bloc-sm {
-  padding: 20px 50px;
+  padding: 10px 50px;
 }
 
 .bg-center,
@@ -92,7 +92,6 @@ a:hover {
 }
 
 .bloc-bg-texture::before {
-  content: "";
   background-size: 2px 2px;
   position: absolute;
   top: 0;
@@ -306,9 +305,17 @@ a:hover {
 .navbar {
   /* Centrage du logo */
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-bottom: 0;
   z-index: 1;
+}
+
+/* Permet de retirer le style et mettre l'élément "Acceuil" en noir */
+.navbar a,
+.site-navigation {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
 }
 
 .navbar-brand {
@@ -336,12 +343,14 @@ a:hover {
 
 .navbar .nav {
   padding-top: 2px;
-  margin-right: -16px;
+  /* Margin trop importante on ne voyait plus l'élément*/
+  margin-right: 20px;
   float: right;
   z-index: 1;
 }
 
 .nav > li {
+  text-decoration: none;
   float: left;
   margin-top: 4px;
   font-size: 16px;
@@ -381,9 +390,19 @@ a:hover {
   z-index: 2;
 }
 
+.row-tight-width-whitespace h1 {
+  color: white;
+}
+
+#bloc-7 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 @media (min-width: 768px) {
   .site-navigation {
-    position: absolute;
+    position: relative;
     top: 50%;
     right: 20px;
     transform: translate(0, -50%);
@@ -426,6 +445,7 @@ a:hover {
 }
 
 .nav > li > .dropdown a {
+  text-decoration: none;
   background: none !important;
   display: block;
   padding: 14px 15px;
@@ -677,13 +697,20 @@ label,
 .btn,
 a {
   font-family: "helvetica";
-  font-weight: 400;
-  color: #575757 !important;
+  font-weight: 400px;
+  color: black !important;
 }
 
+/* Réorganisation du formulaire */
+label {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+/* Retiré pour centrage
 .container {
   max-width: 1000px;
-}
+}*/
 
 .hero-bloc-text {
   font-size: 38px;
@@ -775,8 +802,7 @@ h4 {
 }*/
 
 .portfolio-row {
-  /* Retiré pour centrage
-  margin-bottom: 44px;*/
+  margin-bottom: 44px;
   margin-top: 50px;
 }
 
@@ -805,9 +831,14 @@ h4 {
 .bgc-atomic-tangerine {
   background-color: #f3976c;
 }
-
+/* Passage du blanc au noir car problème contraste */
 .tc-white {
   color: white !important;
+}
+
+/* Passage du blanc au noir car problème contraste */
+.tc-black {
+  color: black !important;
 }
 
 .btn-atomic-tangerine {
@@ -842,9 +873,10 @@ h4 {
   border-color: #364577 !important;
 }
 
+/**Retiré car pas bon pour l'accesibilité (points en fond)
 .bg-dots-bg {
   background-image: url("img/dots-bg.png");
-}
+}*/
 
 /*Retiré car pas bon pour l'accesibilité (lignes) 
 .bg-lines-h2-bg {
@@ -857,6 +889,14 @@ h4 {
 
 .bg-presentation {
   background-image: url("img/image-de-presentation.bmp");
+}
+/*Permet de centrer le texte et de résoudre le problème de constrats en passant du blanc au noir*/
+.col-sm-12 h1,
+.col-sm-12 p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 1024px) {
@@ -876,10 +916,16 @@ h4 {
 @media (max-width: 992px) and (min-width: 768px) {
   .navbar .nav {
     display: block;
-    max-width: 80%;
+    max-width: 70%;
   }
+
   .nav-center.navbar .nav {
     max-width: 100%;
+  }
+
+  .bloc-lg {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -968,7 +1014,8 @@ h4 {
   }
   .navbar .nav {
     padding-top: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 0;
+    /*border-top: 1px solid rgba(0, 0, 0, 0.2);*/
     float: none !important;
   }
   .navbar.row {
@@ -983,10 +1030,10 @@ h4 {
   }
   .nav > li {
     margin-top: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /*border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     background: rgba(0, 0, 0, 0.05);
     text-align: left;
-    padding-left: 15px;
+    padding-left: 15px;*/
     width: 100%;
   }
   .nav > li:hover {
@@ -1014,7 +1061,7 @@ h4 {
     right: -1px;
   }
   .navbar-collapse {
-    padding: 0;
+    /*padding: 0;*/
     overflow-x: hidden;
     -webkit-box-shadow: none;
     box-shadow: none;

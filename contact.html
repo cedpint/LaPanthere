@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <!-- La langue n'était pas spécifiée -->
+  <!-- *1 La langue n'était pas spécifiée -->
   <head>
     <meta charset="utf-8" />
-    <!-- Balise n'ayant pas trop d'utilité par contre important pour la localité, trop de mots clés identiques, ajout de a ville -->
+    <!-- *4 Balise n'ayant pas trop d'utilité par contre important pour la localité, trop de mots clés identiques, ajout de a ville -->
     <meta
       name="keywords"
       content="agence web Lyon, création site web, site internet, agence design"
     />
-    <!-- Jajout d'une description -->
+    <!-- *2 *3 Ajouter le code Google Analytics dans dans la balise "head" + Google search console -->
+    
+
+    <!-- *5 Ajout d'une description -->
     <meta
       name="description"
       content="Page contact de l'Agence web design La Panthère"
@@ -29,12 +32,8 @@
     <script src="./js/blocs.min.js"></script>
     <script src="./js/jqBootstrapValidation.js"></script>
     <script src="./js/formHandler.js"></script>
-    <!-- "Contact à la place de "page2" -->
     <title>Contact</title>
 
-    <!-- Analytics -->
-
-    <!-- Analytics END -->
   </head>
   <body>
     <!-- Principal conteneur -->
@@ -44,36 +43,48 @@
         <div class="container bloc-sm">
           <nav class="navbar row">
             <div class="navbar-header">
+              <!-- *8 INTERDIT BLACK-HAT
+                <div class="keywords" style="color: #cccccc; font-size: 1px">
+                Agence web à paris, stratégie web, web design, illustrations,
+                design de site web, site web, web, internet, site internet, site
+              </div> -->
               <a class="navbar-brand" href="index.html"
                 ><img
                   src="img/agence-la-panthere-monochrome.svg"
-                  alt="atlanta web design logo"
+                  alt="Logo agence la panthère"
                   height="40"
               /></a>
-              <button
+              <!-- *9 INTERDIT BLACK-HAT 
+                <div class="keywords" style="color: #cccccc; font-size: 1px">
+                Agence web à paris, stratégie web, web design, illustrations,
+                design de site web, site web, web, internet, site internet, site
+              </div> -->
+
+              
+              <!--<button
                 id="nav-toggle"
                 type="button"
                 class="ui-navbar-toggle navbar-toggle"
                 data-toggle="collapse"
                 data-target=".navbar-1"
               >
-                <span class="sr-only">Toggle navigation</span
+                <span class="sr-only">Accueil</span
                 ><span class="icon-bar"></span><span class="icon-bar"></span
                 ><span class="icon-bar"></span>
-              </button>
+              </button>-->
             </div>
             <div class="collapse navbar-collapse navbar-1 special-dropdown-nav">
               <ul class="site-navigation nav navbar-nav">
-                <li>
+              <!-- *10 INUTILE CAR NOUS SOMMES DEJA SUR LE CONTACT ET LA PAGE 2 DOIT APPARAITRE QU'EN CAS DE CONTACT
+              <li>
+                <a href="index.html">Accueil</a>
+              </li>
+              <li></li>-->
+                <li> <!-- *11 "page2" remplacé par "contact" -->
                   <a href="index.html">Accueil</a>
                 </li>
-                <!-- Inutile 
-                <li></li>
-                <li>
-                  <a href="page2.html">page2 &gt;</a>
-                </li>-->
               </ul>
-            </div>
+            </div> 
           </nav>
         </div>
       </div>
@@ -82,15 +93,14 @@
       <!-- bloc-6 -->
       <div
         class="bloc bg-dots-bg bg-repeat bgc-atomic-tangerine d-bloc bloc-bg-texture texture-paper"
-        id="bloc-6"
-      >
+        id="bloc-6">
         <div class="container bloc-lg">
           <div class="row">
             <div class="col-sm-12">
-              <h1 class="text-center hero-bloc-text tc-white">
+              <h1 class="text-center hero-bloc-text tc-black">
                 Parlons web design !
               </h1>
-              <p class="text-center mg-lg tc-white tight-width-whitespace">
+              <p class="text-center mg-lg tc-black tight-width-whitespace">
                 Nous sommes ravis que vous souhaitiez collaborer avec notre
                 agence.<br />
                 Parlez-nous de votre projet en complétant le formulaire
@@ -111,50 +121,53 @@
                 id="form_1"
                 novalidate
                 success-msg="Your message has been sent."
-                fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!"
-              >
+                fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!"><!-- *21 Les labels étaient mal écrits -->
+                
                 <div class="form-group">
-                  <label> Nom </label>
-                  <input id="name" class="form-control" required />
+                  <label> Nom 
+                    <input id="name" class="form-control" required />
+                  </label>  
                 </div>
+                
                 <div class="form-group">
-                  <label> Adresse email </label>
-                  <input
-                    id="email"
-                    class="form-control"
-                    type="email"
-                    required
-                  />
+                  <label> Adresse email 
+                    <input id="email" class="form-control" type="email" required/>
+                  </label>
                 </div>
+
                 <div class="form-group">
-                  <label> Comment nous avez-vous connu ? </label>
-                  <input
+                  <label> Comment nous avez-vous connu ?
+                    <input
                     class="form-control"
                     type="email"
                     required
                     id="input_504"
-                  />
+                    />
+                  </label>
                 </div>
+
                 <div class="form-group">
                   <label>
                     Brief de votre projet (Ajoutez autant de détails que
-                    nécessaire)<br /> </label
-                  ><textarea
-                    id="message"
-                    class="form-control"
-                    rows="4"
-                    cols="50"
-                    required
-                  ></textarea>
+                    nécessaire)<br /> 
+                    <textarea
+                      id="message"
+                      class="form-control"
+                      rows="4"
+                      cols="50"
+                      required> 
+                    </textarea>
+                  </label>
                 </div>
+
                 <button
                   class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine"
-                  type="submit"
-                >
+                  type="submit">
                   Envoyer
                 </button>
               </form>
             </div>
+
             <div class="col-sm-6">
               <p>
                 contact@agencelapanthere.com<br />2 place Sathonay 69001 Lyon<br />Ouvert
@@ -162,6 +175,7 @@
               </p>
             </div>
           </div>
+
         </div>
       </div>
       <!-- bloc-7 END -->
@@ -178,44 +192,109 @@
           <div class="row">
             <div class="col-sm-12">
               <p class="text-center white">
-                Agence La Panthère - Agence web basée à Lyon.<br />
+                Agence web La Panthère
               </p>
-              <!-- Retiré car inutile dans footer de la page contact
+              <p class="text-center white">
+                Téléphone : 0169696969
+              </p>
+              
               <div class="row row-no-gutters social">
                 <div class="col-sm-3">
                   <div class="text-center">
-                    <a class="social" href="#"
+                    <!--  Des titres ont été ajoutés car problème de liens vides
+                      À therme il faudra mettre les bons liens au lieu du #-->
+                    <a class="social" href="#" aria-label="Compte Twitter Agence La Panthère"
                       ><span class="fa fa-twitter icon-md"></span
                     ></a>
                   </div>
                 </div>
                 <div class="col-sm-3">
                   <div class="text-center">
-                    <a class="social" href="index.html"
+                    <a class="social" href="#" aria-label="Compte Facebook Agence La Panthère"
                       ><span class="fa fa-facebook icon-md"></span
                     ></a>
                   </div>
                 </div>
-                <div class="col-sm-3">
+                <!-- *22 Retiré car rien à voir avec les réseaux sociaux
+                  <div class="col-sm-3">
                   <div class="text-center">
                     <a class="social" href="index.html"
                       ><span class="fa fa-dribbble icon-md"></span
                     ></a>
                   </div>
-                </div>
-                
+                </div> -->
                 <div class="col-sm-3">
                   <div class="text-center">
-                    <a class="social" href="index.html"
+                    <a class="social" href="#" aria-label="Compte Instagram Agence La Panthère"
                       ><span class="fa fa-instagram icon-md"></span
                     ></a>
                   </div>
                 </div>
-              </div> -->
-            </div>
+
+                <!-- *4 Inutile
+                <div class="keywords" style="color: #f3976c">
+                  Agence web à paris, stratégie web, web design, illustrations,
+                  design de site web, site web, web, internet, site internet,
+                  site
+                </div>
+              </div>--> 
+              <!-- Inutiles 
+              <div class="row">
+                <div class="col-sm-4">
+                  *19 Partenaires
+                  <ul>
+                    <li><a href="voiture.com">voiture.com</a></li>
+                    <li><a href="pizza.com">pizza.com</a></li>
+                    <li><a href="matoiture.com">matoiture.com</a></li>
+                    <li><a href="immobilierseo.com">immobilierseo.com</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  *20 Annuaires liste 1
+                  <ul>
+                    <li><a href="annuaireagence.com">annuaireagence.com</a></li>
+                    <li><a href="annuaireseo.com">annuaireseo.com</a></li>
+                    <li>
+                      <a href="annuairemarketing.com">annuairemarketing.com</a>
+                    </li>
+                    <li><a href="123seoture.com">123seo.com</a></li>
+                    <li><a href="123site.com">123site.com</a></li>
+                    <li>
+                      <a href="annuairewordpress.com">annuairewordpress.com</a>
+                    </li>
+                    <li><a href="listeagence.com">listeagence.com</a></li>
+                    <li>
+                      <a href="meilleuresagencesparis.com"
+                        >meilleuresagencesparis.com</a
+                      >
+                    </li>
+                    <li><a href="listeseo.com">listeseo.com</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  Annuaires liste 2
+                  <ul>
+                    <li><a href="betterseo.com">betterseo.com</a></li>
+                    <li><a href="ameliorerseo.com">ameliorerseo.com</a></li>
+                    <li><a href="seojuicelien.com">seojuicelien.com</a></li>
+                    <li><a href="meilleursliens.com">meilleursliens.com</a></li>
+                    <li><a href="liensagogo.com">liensagogo.com</a></li>
+                    <li><a href="backlink.com">backlink.com</a></li>
+                    <li>
+                      <a href="linkjuiceannuaire.com">linkjuiceannuaire.com</a>
+                    </li>
+                    <li>
+                      <a href="remontersurgoogle.com">remontersurgoogle.com</a>
+                    </li>
+                    <li><a href="vraiseofiable.com">vraiseofiable.com</a></li>
+                  </ul>
+                </div>  
+              </div>
+            </div> -->
           </div>
         </div>
       </div>
+    </div>
       <!-- Footer - bloc-8 END -->
     </div>
     <!-- Principal conteneur END -->
