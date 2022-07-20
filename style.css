@@ -7,12 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Permet de centrer le logo dans le header */
+/* Permet de centrer le logo dans le header 
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  border: 5px solid black;
+}*/
 
 a,
 button {
@@ -47,8 +48,13 @@ a:hover {
 }
 
 .bloc .container {
+  display: block;
   padding-left: 0;
   padding-right: 0;
+}
+
+.bloc img {
+  object-fit: cover;
 }
 
 .bloc-lg {
@@ -303,9 +309,7 @@ a:hover {
 }
 
 .navbar {
-  /* Centrage du logo */
-  display: flex;
-  justify-content: space-evenly;
+  width: 100%;
   margin-bottom: 0;
   z-index: 1;
 }
@@ -576,10 +580,14 @@ button {
 a[data-lightbox] {
   position: relative;
   align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 a[data-lightbox]:hover::before {
   content: "+";
+  display: flex;
+  justify-content: center;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial;
   font-size: 32px;
@@ -707,10 +715,10 @@ label {
   padding: 10px;
   flex-direction: column;
 }
-/* Retiré pour centrage
+
 .container {
-  max-width: 1000px;
-}*/
+  width: 100%;
+}
 
 .hero-bloc-text {
   font-size: 38px;
@@ -916,7 +924,7 @@ h4 {
 @media (max-width: 992px) and (min-width: 768px) {
   .navbar .nav {
     display: block;
-    max-width: 70%;
+    max-width: 100%;
   }
 
   .nav-center.navbar .nav {
