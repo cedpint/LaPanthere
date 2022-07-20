@@ -70,7 +70,7 @@ a:hover {
 }
 
 .bloc-sm {
-  padding: 10px 50px;
+  padding: 20px 50px;
 }
 
 .bg-center,
@@ -309,17 +309,8 @@ a:hover {
 }
 
 .navbar {
-  width: 100%;
   margin-bottom: 0;
   z-index: 1;
-}
-
-/* Permet de retirer le style et mettre l'élément "Acceuil" en noir */
-.navbar a,
-.site-navigation {
-  list-style-type: none;
-  text-decoration: none;
-  color: black;
 }
 
 .navbar-brand {
@@ -353,7 +344,6 @@ a:hover {
 }
 
 .nav > li {
-  text-decoration: none;
   float: left;
   margin-top: 4px;
   font-size: 16px;
@@ -369,7 +359,7 @@ a:hover {
 }
 
 .navbar-toggle {
-  margin: 10px 5px 0 0;
+  margin: 10px 10px 0 0;
   border: 0px;
 }
 
@@ -397,15 +387,16 @@ a:hover {
   color: white;
 }
 
-#bloc-7 {
+/*#bloc-7 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
+  border: 4px solid red;
+}*/
 
 @media (min-width: 768px) {
   .site-navigation {
-    position: relative;
+    position: absolute;
     top: 50%;
     right: 20px;
     transform: translate(0, -50%);
@@ -424,7 +415,7 @@ a:hover {
   }
 
   /* Erreur de css il y avait un point qui trainait */
-  .nav-center {
+  .nav-center .navbar-header {
     width: 100%;
   }
 
@@ -578,15 +569,12 @@ button {
 
 a[data-lightbox] {
   position: relative;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
 }
 
 a[data-lightbox]:hover::before {
   content: "+";
-  display: flex;
-  justify-content: center;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial;
   font-size: 32px;
@@ -708,15 +696,8 @@ a {
   color: black !important;
 }
 
-/* Réorganisation du formulaire */
-label {
-  display: flex;
-  padding: 10px;
-  flex-direction: column;
-}
-
 .container {
-  width: 100%;
+  max-width: 1000px;
 }
 
 .hero-bloc-text {
@@ -756,7 +737,7 @@ p {
   margin-top: 22px;
   color: #ffffff !important;
   text-transform: uppercase;
-  padding: 15px 28px 12px 28px;
+  padding: 12px 28px 12px 28px;
   font-size: 16px;
   font-weight: 700;
 }
@@ -896,14 +877,6 @@ h4 {
 .bg-presentation {
   background-image: url("img/image-de-presentation.jpeg");
 }
-/*Permet de centrer le texte et de résoudre le problème de contraste en passant du blanc au noir*/
-.col-sm-12 h1,
-.col-sm-12 p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
 @media (max-width: 1024px) {
   .bloc {
@@ -921,17 +894,11 @@ h4 {
 
 @media (max-width: 992px) and (min-width: 768px) {
   .navbar .nav {
-    display: block;
-    max-width: 100%;
+    max-width: 80%;
   }
 
   .nav-center.navbar .nav {
     max-width: 100%;
-  }
-
-  .bloc-lg {
-    display: flex;
-    justify-content: center;
   }
 }
 
@@ -1000,6 +967,7 @@ h4 {
   .bloc-mob-center-text {
     text-align: center;
   }
+
   .page-container {
     overflow-x: hidden;
     position: relative;
@@ -1012,15 +980,14 @@ h4 {
   h6,
   p,
   #disqus_thread {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
   .b-parallax {
     background-attachment: scroll;
   }
   .navbar .nav {
     padding-top: 0;
-    margin-top: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     float: none !important;
   }
@@ -1116,7 +1083,6 @@ h4 {
   }
   .btn-dwn {
     display: none;
-    border: 3px solid blue;
   }
   .voffset {
     margin-top: 5px;

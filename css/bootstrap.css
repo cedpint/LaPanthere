@@ -5117,7 +5117,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     box-shadow: none;
   }
   .navbar-collapse.collapse {
-    display: none !important;
+    display: block !important;
     height: auto !important;
     padding-bottom: 0;
     overflow: visible !important;
@@ -5254,7 +5254,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 @media (min-width: 768px) {
   .navbar-toggle {
-    display: block;
+    display: none;
   }
 }
 
