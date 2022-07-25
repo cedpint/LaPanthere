@@ -651,14 +651,15 @@ a[data-lightbox]:hover img {
 
 .next-lightbox,
 .prev-lightbox {
+  /* Changement de couleur vers l'orange pour cause de contaste + cohérence code couleur*/
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.9);
-  background: rgba(0, 0, 0, 0.5);
+  color: rgba(7, 7, 7, 0.9);
+  background: #f3976c;
   transition: all 0.2s ease-in-out;
   position: absolute;
   top: 45%;
   z-index: 1;
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 .next-lightbox {
@@ -920,7 +921,7 @@ h4 {
 
 @media (max-width: 991px) {
   .container {
-    width: 100%;
+    width: 90%;
   }
   .b-parallax {
     background-attachment: scroll;
@@ -959,7 +960,7 @@ h4 {
 
   /*Size des p était trop petite*/
   p {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   /* Centrage des photos plus aéré*/
